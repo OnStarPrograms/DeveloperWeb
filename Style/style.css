@@ -173,8 +173,40 @@ h3{
   display: inline;
 }
 
+.Pan{
+  -moz-animation: pan 20s infinite;
+  -webkit-animation: pan 20s infinite;
+  animation: pan 20s infinite;
+}
+@-moz-keyframes pan {
+  0%   { -moz-transform: translateX(-50%); }
+  100% { -moz-transform: translateX(0%); }
+}
+@-webkit-keyframes pan {
+  0%   { -webkit-transform: translateX(-50%); }
+  100% { -webkit-transform: translateX(0%); }
+}
 
-
+@keyframes pan{
+  0%{
+    transform: translate(-20%, -50%);
+  }
+  20%{
+    transform: translate(0%,0%);
+  }
+  40%{
+    transform: translate(-25%,-50%);
+  }
+  60%{
+    transform: translate(-26%,-15%);
+  }
+  80%{
+    transform: translate(-50%,-10%);
+  }
+  100%{
+      transform: translate(-20%,-50%);
+  }
+}
 
 
 
