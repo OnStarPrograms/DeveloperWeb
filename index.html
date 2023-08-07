@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Index</title>
+  <link href="Style/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="prerender" href="Rindex.html">
+</head>
+<body>
+
+<!-- Page Content -->
+
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div id = "TopBlock">Home</div>
+  <div>
+    <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
+    <div id = "PageBack">
+    </div>
+    <div class="w3-container" id = "body">
+      <div id = "homeButt"><button id = "homeButton"  onclick="Transition('index.html')">⌂</button></div><!-- <a href="index.html"></a> -->
+      <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Aiden Thomas; Software Developer.</h1>
+      <div id="Back">
+        <img id = "Background" src = "Image/Background.png" width = "100%" height = "auto"/>
+        <!-- <img id = "Background" src = "Style/Hi-Res-Seamless-Dark-Wood-Texture.jpg" width = "100%" height = "auto"/> -->
+        <img id = "Aiden" src="Image/AidenAlon.png" alt = "Pic of me"/>
+        <button id="Transparent" onclick="Transition('Creator.html')"></button>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+    </div>
+  </div>
+  <script>
+    $("#body").hide().slideDown("slow");;
+    // function Transition(Site){
+    //   $("#homeButton").click(OpenIndex(Site));
+    // }
+    // async function OpenIndex(Site){
+    //   $("#body").click(w3_close()).hide("slow");
+    //   await new Promise(r => setTimeout(r, 700));
+    //   window.open(Site,"_self");
+    // }
+    if (HTMLScriptElement.supports &&
+        HTMLScriptElement.supports('speculationrules')) {
+    const specScript = document.createElement('script');
+    specScript.type = 'speculationrules';
+    specRules = {
+        prerender: [
+        {
+            source: 'list',
+            urls: ['Rindex.html'],
+        },
+        ],
+    };
+    specScript.textContent = JSON.stringify(specRules);
+    console.log('added speculation rules to: next.html');
+    document.body.append(specScript);
+    change();
+    }
+    async function change(){
+        await new Promise(r => setTimeout(r, 900));
+        window.open("Rindex.html","_self");
+    }
+    </script>
+    </body>
+</html>

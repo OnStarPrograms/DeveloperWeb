@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lyrics</title>
+  <link href="Style/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="Js/Nav.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+h3{
+width:100px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-black w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-animate-right" onclick="w3_close()" id = "CloseButton">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button"><button onclick="Transition('SoftDev.html')">Software</button></a>
+  <a href="#" class="w3-bar-item w3-button"><button onclick="Transition('WebDev.html')">Web</button></a>
+  <a href="#" class="w3-bar-item w3-button"><button onclick="Transition('GraphicDesign.html')">Design</button></a>
+  <div id = "nav">
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">About&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;</a>
+      <div class="dropdown-content">
+        <a href="#"><button onclick="Transition('Certificates.html')">Certifications</button></a>
+        <a href="#"><button onclick="Transition('Resume.html')">Resume</button></a>
+        <a href="#"><button onclick="Transition('Creator.html')">Contact</button></a>
+      </div>
+    </li>
+  </div>
+</div>
+
+
+<!-- Page Content -->
+
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div id = "TopBlock">Past Work</div>
+<div>
+  <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
+  <div id = "PageBack">
+  </div>
+  <div class="w3-container" id = "body">
+    <div id = "homeButt"><button id = "homeButton"  onclick="Transition('index.html')">⌂</button></div>
+    <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Software Development</h1>
+  </br>
+</br>
+
+
+<div id = "Example1" style = "position: relative;">
+  <h3>Mail Automation Tool</h3>
+  <br/>
+  <button class="accordion">
+      SHA-256
+  </button>
+  <div class="panel">
+    <p style="word-wrap: break-word;">14a259d9d0c1bedee4739fb20aa7e970326bb6bdb072959d9971aacbeb541efe</p>
+  </div>
+  <div id="CodeBox">
+    <img src = "Image/MailAutomater.png" width = "400%" height = "auto"/>
+  </div>
+  <div id="DownloadZip">
+    <a href="Path/To/Download" style="text-decoration: none; display:block;height:100%;width:100%" download>Download the Zip <div style="text-decoration:underline; display: inline;">⇩</div></a>
+  </div>
+</div>
+
+<br/>
+
+<div id = "Example1" style = "position: relative; left: 25%;">
+  <h3>Example1</h3>
+  <br/>
+  <button class="accordion">
+    SHA-256
+  </button>
+  <div class="panel">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+  <div id="CodeBox">
+
+  </div>
+  <div id="DownloadZip">
+    <a href="Downloads/MailAutomater.zip" style="text-decoration: none; display:block;height:100%;width:100%" download>Download the Zip <div style="text-decoration:underline; display: inline;">⇩</div></a>
+  </div>
+</div>
+
+
+  <br/>
+  <br/>
+  <br/>
+  </div>
+</div>
+<script>
+  $("#body").hide().delay(15).slideDown("slow");
+  function Transition(Site){
+    $("#homeButton").click(OpenIndex(Site));
+  }
+  async function OpenIndex(Site){
+    $("#body").click(w3_close()).hide("slow");
+    await new Promise(r => setTimeout(r, 600));
+    window.open(Site,"_self");
+  }
+</script>
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      } 
+    });
+  }
+  </script>
+</body>
+<br/>
+<br/>
+<br/>
+</html>

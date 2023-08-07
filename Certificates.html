@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Structural</title>
+  <link href="Style/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="Js/Nav.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-black w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large w3-animate-right" onclick="w3_close()" id = "CloseButton">Close &times;</button>
+  <a href="#" class="w3-bar-item w3-button"><button onclick="Transition('SoftDev.html')">Software</button></a>
+  <a href="#" class="w3-bar-item w3-button"><button onclick="Transition('WebDev.html')">Web</button></a>
+  <a href="#" class="w3-bar-item w3-button"><button onclick="Transition('GraphicDesign.html')">Design</button></a>
+  <div id = "nav">
+    <li class="dropdown">
+      <a href="javascript:void(0)" class="dropbtn">About&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;&#8195;</a>
+      <div class="dropdown-content">
+        <a href="#"><button onclick="Transition('Certificates.html')">Certifications</button></a>
+        <a href="#"><button onclick="Transition('Resume.html')">Resume</button></a>
+        <a href="#"><button onclick="Transition('Creator.html')">Contact</button></a>
+      </div>
+    </li>
+  </div>
+</div>
+
+
+
+<!-- Page Content -->
+
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+<div id = "TopBlock">Certificates</div>
+  <div>
+    <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
+    <div id = "PageBack">
+    </div>
+    <div class="w3-container" id = "body">
+      <div id = "homeButt"><button id = "homeButton"  onclick="Transition('index.html')">⌂</button></div>
+      <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">AP Lit. Music Assignment</h1>
+      <h4>Song: The General</h4>
+      <h4>Band: Dispatch</h4>
+      <h4>Released: July 1998</h4>
+    </br>
+  </br>
+    <article>
+      <h3>Musician Notes</h3>
+      <figure>
+        <p>On the battlefield he gained respectful fame [a]</p>
+        <p>With many medals of bravery and stripes to his name [a]</p>
+        <p>He grew a beard as soon as he could to cover the scars on his face [a]</p>
+        <p>And always urged his men on [b]</p>
+        <br/>
+        <p>But on the eve of a great battle with the infantry in dream [c]</p>
+        <p>The Old General tossed in his sleep and wrestled with its meaning [c]</p>
+        <p>He awoke from the night to tell what he had seen [c]</p>
+        <p>And walked slowly out of his tent [d]</p>
+      </figure>
+      <br/>
+      <p>-Follows a Iambic pentameter</p>
+      <br/>
+      <p>-Follows a Asynchronous "a-a-a-b" ryhming scheme, putting emphasize on "b"</p>
+      <br/>
+      <p>-Employs visual language to craft a realistic enviroment</p>
+      <br/>
+      <p>-Is it a Ballad(?)</p>
+      <p></p>
+    </article>
+    <br/>
+    <br/>
+    <br/>
+    </div>
+  </div>
+  <script>
+    $("#body").hide().delay(15).slideDown("slow");
+    function Transition(Site){
+      $("#homeButton").click(OpenIndex(Site));
+    }
+    async function OpenIndex(Site){
+      $("#body").click(w3_close()).hide("slow");
+      await new Promise(r => setTimeout(r, 600));
+      window.open(Site,"_self");
+    }
+  </script>
+</body>
+<br/>
+<br/>
+<br/>
+</html>
