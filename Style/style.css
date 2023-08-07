@@ -179,12 +179,44 @@ h3{
   animation: pan 20s infinite;
 }
 @-moz-keyframes pan {
-  0%   { -moz-transform: translateX(-50%); }
-  100% { -moz-transform: translateX(0%); }
+  0%{
+    -moz-transform: translate(-20%, -50%);
+  }
+  20%{
+    -moz-transform: translate(0%,0%);
+  }
+  40%{
+    -moz-transform: translate(-25%,-50%);
+  }
+  60%{
+    -moz-transform: translate(-26%,-15%);
+  }
+  80%{
+    -moz-transform: translate(-50%,-10%);
+  }
+  100%{
+    -moz-transform: translate(-20%,-50%);
+  }
 }
 @-webkit-keyframes pan {
-  0%   { -webkit-transform: translateX(-50%); }
-  100% { -webkit-transform: translateX(0%); }
+  0%{
+    -webkit-transform: translate(-20%, -50%);
+  }
+  20%{
+    -webkit-transform: translate(0%,0%);
+  }
+  40%{
+    -webkit-transform: translate(-25%,-50%);
+  }
+  60%{
+    -webkit-transform: translate(-26%,-15%);
+  }
+  80%{
+    -webkit-transform: translate(-50%,-10%);
+  }
+  100%{
+    -webkit-transform: translate(-20%,-50%);
+  }
 }
 
 @keyframes pan{
@@ -204,7 +236,7 @@ h3{
     transform: translate(-50%,-10%);
   }
   100%{
-      transform: translate(-20%,-50%);
+    transform: translate(-20%,-50%);
   }
 }
 
