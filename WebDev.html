@@ -39,6 +39,7 @@
 <div id = "TopBlock">Game</div>
 <div>
   <!-- <input id="Gamer" type="checkbox" /> -->
+  
   <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
   <div id = "PageBack">
   </div>
@@ -50,7 +51,7 @@
     <div id = "Example1" style = "position: relative;">
       <h3>Micro Keylogger</h3>
       <br/>
-      
+
       <div id="CodeBox">
         <iframe src="WebDev.html" width="100%" height="100%"></iframe>
       </div>
@@ -65,22 +66,19 @@
 <br/>
 <script>
   $("#body").hide().delay(15).slideDown("slow");
-  document.getElementById("Gamer").addEventListener("focusout", myFunction);
 
-  function myFunction() {
-    alert("Input field lost focus.");
-  }
-  //---------------------------------------------------------------
-//   function checkFocus() {
-//   if(document.activeElement == document.getElementsByTagName("iframe")[0]) {
-//     console.log('iframe has focus');
-//   } else {
-//     console.log('iframe not focused');
-//     alert("Input field lost focus.");
-//   }
-// }
+// when the user loses focus
+window.addEventListener("blur", () => {
+  alert("What da fuc");
+});
 
-// window.setInterval(checkFocus, 20000); 
+// when the user's focus is back to your tab (website) again
+window.addEventListener("focus", () => {
+    document.title = "Patch Up";
+});
+
+
+window.setInterval(checkFocus, 1000); 
   function Transition(Site){
     $("#homeButton").click(OpenIndex(Site));
   }
