@@ -38,6 +38,7 @@
 <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 <div id = "TopBlock">Game</div>
 <div>
+
   <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
   <div id = "PageBack">
   </div>
@@ -64,6 +65,22 @@
 <br/>
 <script>
   $("#body").hide().delay(15).slideDown("slow");
+  document.getElementById("Gamer").addEventListener("focusout", myFunction);
+
+  function myFunction() {
+    alert("Input field lost focus.");
+  }
+  //---------------------------------------------------------------
+//   function checkFocus() {
+//   if(document.activeElement == document.getElementsByTagName("iframe")[0]) {
+//     console.log('iframe has focus');
+//   } else {
+//     console.log('iframe not focused');
+//     alert("Input field lost focus.");
+//   }
+// }
+
+// window.setInterval(checkFocus, 20000); 
   function Transition(Site){
     $("#homeButton").click(OpenIndex(Site));
   }
