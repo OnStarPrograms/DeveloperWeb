@@ -139,7 +139,7 @@ figure {
 }
 #CodeBox2{
   width:50%;
-  height:580px;
+  height:80%;
   margin-bottom: 20px;
   background-color: aliceblue;
   color:white;
@@ -154,6 +154,22 @@ figure {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+#CodeBox3{
+  width:50%;
+  height:200%;
+  margin-bottom: 20px;
+  background-color: aliceblue;
+  color:white;
+  overflow: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+  float: left;
+}
+
+#CodeBox3::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
 
 #CodeBox{
   width:40%;
@@ -196,11 +212,13 @@ figure {
 
 #DownloadZip1{
   width:50%;
-  height:580px;
+  height:100%;
   text-align: center;
-  position:relative;
+  position:absolute;
   float:right;
-  padding: 250px 0;
+  margin-top:21px;
+  padding: 32.3% 0;
+  margin-bottom: 20px;
   top:1%;
   color:#000000;
   transition: all 1s ease;
