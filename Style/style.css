@@ -176,10 +176,9 @@ figure {
   height:300px;
   background-color: #000000;
   color:white;
-  overflow: scroll;
+  overflow: hidden;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
-  scrollbar-width: none; /* for Firefox */
-  overflow-y: scroll; 
+  scrollbar-width: none; /* for Firefox */ 
 }
 
 #CodeBox::-webkit-scrollbar {
