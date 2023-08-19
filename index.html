@@ -35,31 +35,23 @@
     </div>
   </div>
   <script>
-    // function Transition(Site){
-    //   $("#homeButton").click(OpenIndex(Site));
-    // }
-    // async function OpenIndex(Site){
-    //   $("#body").click(w3_close()).hide("slow");
-    //   await new Promise(r => setTimeout(r, 700));
-    //   window.open(Site,"_self");
-    // }
     if (HTMLScriptElement.supports &&
         HTMLScriptElement.supports('speculationrules')) {
-    const specScript = document.createElement('script');
-    specScript.type = 'speculationrules';
-    specRules = {
-        prerender: [
-        {
-            source: 'list',
-            urls: ['Rindex.html'],
-        },
-        ],
-    };
-    specScript.textContent = JSON.stringify(specRules);
-    console.log('added speculation rules to: next.html');
-    document.body.append(specScript);
-    change();
-    }
+          const specScript = document.createElement('script');
+          specScript.type = 'speculationrules';
+          specRules = {
+              prerender: [
+              {
+                  source: 'list',
+                  urls: ['Rindex.html'],
+              },
+              ],
+          };
+          specScript.textContent = JSON.stringify(specRules);
+          console.log('added speculation rules to: next.html');
+          document.body.append(specScript);
+          change();
+          }
     async function change(){
         await new Promise(r => setTimeout(r, 900));
         window.open("Rindex.html","_self");
