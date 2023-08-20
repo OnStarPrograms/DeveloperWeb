@@ -10,6 +10,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="Js/JQuery.js"></script>
   <link rel="stylesheet" href="Style/w3.css">
+  <link rel="stylesheet" href="Style/GraphicDesign.css">
+  <script src="Js/GraphicDesign.js"></script>
 </head>
 <body>
 
@@ -34,20 +36,22 @@
 <!-- Page Content -->
 
 <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
-<div id = "TopBlock">Game</div>
+<div id = "TopBlock">Design</div>
 <div>
   <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
   <div id = "PageBack">
   </div>
   <div class="w3-container" id = "body">
     <div id = "homeButt"><button id = "homeButton"  onclick="Transition('index.html')">⌂</button></div>
-    <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">AP Lit. Music Assignment</h1>
-    <h4>Song: The General</h4>
-    <h4>Band: Dispatch</h4>
-    <h4>Released: July 1998</h4>
-  <video  id="myVideo" width="100%" height="auto" controls >
-  <source src="Video/Dispatch - The General (Official Audio).mp4" type="video/mp4">
-  </video>
+    <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Graphical Design</h1>
+    <div class="img-comp-container">
+      <div class="img-comp-img">
+        <img src="Image/Aiden_Thomas_A4_3.jpg" width="650" height="500">
+      </div>
+      <div class="img-comp-img img-comp-overlay">
+        <img src="Image/IMG_2995.jpg" width="650" height="500">
+      </div>
+</div>
   <br/>
   <br/>
   <br/>
@@ -57,6 +61,7 @@
 <br/>
 <br/>
 <script>
+  initComparisons();
   $("#body").hide().delay(15).slideDown("slow");
   function Transition(Site){
     $("#homeButton").click(OpenIndex(Site));
