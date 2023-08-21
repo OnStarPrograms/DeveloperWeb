@@ -1,0 +1,24 @@
+#block1{
+    display: inline-block;
+    width:300px;
+    height:500px;
+    overflow: hidden;
+    z-index: 1;
+}
+#block1:hover{
+    overflow: visible;
+    z-index: 2;
+    #block2{
+        
+    }
+}
+#block2{
+    display: inline-block;
+    width:300px;
+    height:500px;
+    overflow: hidden;
+    z-index: 1;
+}
+#block2:hover{
+    overflow: visible;
+}
