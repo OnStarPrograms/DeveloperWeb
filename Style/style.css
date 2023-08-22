@@ -22,6 +22,7 @@ html {
   height:70px;
   padding-left:1%;
   padding-right:1%;
+  transition: all 1s ease;
 }
 body {
   background-image: url("Hi-Res-Seamless-Dark-Wood-Texture.jpg");
@@ -179,6 +180,7 @@ figure {
   overflow: hidden;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */ 
+  transition: all 1s ease;
 }
 
 #CodeBox::-webkit-scrollbar {
@@ -520,4 +522,57 @@ background-color: grey;
   top: 0;
   left: 0;
   opacity: 0;
+}
+#Exampl1{
+  left:0%;
+  transition: all 1s ease;
+}
+#Exampl2{
+  left:30%;
+  transition: all 1s ease;
+}
+#Exampl3{
+  left:60%;
+  transition: all 1s ease;
+}
+
+@media (max-width: 800px) {
+  #body{
+    width:100%;
+    left: 0%;
+  }
+  #Back{
+    width:90%;
+    left:5%;
+  }
+  #Waffle{
+    width:20%;
+  }
+  #CodeBox{
+    width:90%;
+  }
+  #Exampl1{
+    left:5%;
+  }
+  #Exampl2{
+    left:5%;
+  }
+  #Exampl3{
+    left:5%;
+  }
+  #DownloadZip{
+    width: 80%;
+  }
+  #CodeBox2{
+    margin-left: 5%;
+    width:90%;
+  }
+  #CodeBox3{
+    margin-left: 5%;
+    width:90%;
+  }
+  #DownloadZip1{
+    width:100%;
+    position:relative;
+  }
 }
