@@ -114,7 +114,7 @@ figure {
   top:15%;
   position: absolute;
   overflow: hidden;
-  width: 70%;
+  width: 75%;
   object-fit: color;
   transition: all 0.2s ease;
 }
@@ -482,8 +482,6 @@ background-color: grey;
 
 
 
-
-
 .accordion {
   background-color: aliceblue;
   color: grey;
@@ -504,7 +502,6 @@ background-color: grey;
   float: right;
   content: "⮜";
 }
-
 .active:after {
   content: "⮟";
 }
