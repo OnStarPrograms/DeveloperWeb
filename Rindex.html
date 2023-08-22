@@ -43,7 +43,7 @@
     <div id = "PageBack">
     </div>
     <div class="w3-container" id = "body">
-      <div id = "homeButt"><button id = "homeButton"  onclick="Transition('index.html')">⌂</button></div><!-- <a href="index.html"></a> -->
+      <div id = "homeButt"><button id = "homeButton"  onclick="Transition('Rindex.html')">⌂</button></div><!-- <a href="index.html"></a> -->
       <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Aiden Thomas; Software Developer.</h1>
       <div id="Back">
         <img id = "Background" src = "Image/Background.png" width = "100%" height = "auto"/>
@@ -65,6 +65,7 @@
       await new Promise(r => setTimeout(r, 600));
       window.open(Site,"_self");
     }
+    $("#body").hide().slideDown("slow");;
   </script>
 </body>
 </html>

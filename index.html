@@ -10,30 +10,31 @@
   <script src="Js/Nav.js"></script>
   <link rel="stylesheet" href="Style/w3.css">
   <link rel="prerender" href="Rindex.html">
+  <style> 
+    div {
+      width: 40%;
+      height: 100px;
+      background-color: aliceblue;
+      position: relative;
+      animation: mymove 5s linear;
+      top:50px;
+      left:30%;
+      box-shadow: 5px 10px;
+    }
+
+    @keyframes mymove {
+      0%   {top: 20000px;}
+      25%  {top: 2000px;}
+      75%  {top: 2000px;}
+      100% {top: 50px;}
+    }
+    </style>
 </head>
 <body>
 
 <!-- Page Content -->
 <!-- <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div> -->
-<div id = "TopBlock">Home</div>
-  <div>
-    <button class="w3-button w3-black w3-xxlarge" onclick="w3_open()" id = "Waffle">&#9776;</button>
-    <div id = "PageBack">
-    </div>
-    <div class="w3-container" id = "body">
-      <div id = "homeButt"><button id = "homeButton">⌂</button></div><!-- <a href="index.html"></a> -->
-      <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Aiden Thomas; Software Developer.</h1>
-      <div id="Back">
-        <img id = "Background" src = "Image/Background.png" width = "100%" height = "auto"/>
-        <!-- <img id = "Background" src = "Style/Hi-Res-Seamless-Dark-Wood-Texture.jpg" width = "100%" height = "auto"/> -->
-        <img id = "Aiden" src="Image/AidenAlon.png" alt = "Pic of me"/>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <a href="Rindex.html">Click to manually redirect if page doesn't work</a>
-    </div>
-  </div>
+    <div><a href="Rindex.html">Warning! there might be some items within this website that wont load properly click here to acknowledge and continue</a></div>
   <script>
     if (HTMLScriptElement.supports &&
         HTMLScriptElement.supports('speculationrules')) {
@@ -56,7 +57,6 @@
         await new Promise(r => setTimeout(r, 900));
         window.open("Rindex.html","_self");
     }
-    $("#body").hide().slideDown("slow");;
     </script>
     <noscript><div style="position: absolute;height: 100%;width: 100%; background-color: white;color:magenta;top: 15%;left:0%;"><p>This site uses java script to make things look pretty,<br/> if your seeing this message, Javascript is disabled<br/> please activate it to access the rest of the website</p></div></noscript>
     </body>
