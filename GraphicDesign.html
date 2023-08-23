@@ -11,12 +11,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="Js/JQuery.js"></script>
   <link rel="stylesheet" href="Style/w3.css">
-  <link rel="stylesheet" href="Style/GraphicDesign.css">
-  <script src="Js/GraphicDesign.js"></script>
   <style>
     #div1 {
-      min-width: 150px;
-      min-height: 100px;
+      min-width: 100%;
+      min-height: 400px;
       width:fit-content;
       height: auto;
       padding: 10px;
@@ -24,13 +22,14 @@
     }
     
     #div2 {
+      display:flex;
       width: 100px;
       height: 100px;
       padding: 10px;
       border: 1px solid #aaaaaa;
     }
     #drag1 {
-      max-width: 100px;
+      max-width: 80px;
       height: auto;
     }
     #div1 #drag1{
@@ -102,20 +101,20 @@
     <div id = "homeButt"><button id = "homeButton"  onclick="Transition('Rindex.html')">⌂</button></div>
     <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Graphical Design</h1>
 
-<p>Drag and drop an image to resize it to screen</p>
+<p>Drag and drop an image to resize it to the screen</p>
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
 <br>
 <br>
-
+<div id="emptySpace" style="width:30%; display: inline-flex;"></div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
   <img id="drag1" src="Image/IMG_2995.jpg" draggable="true" ondragstart="drag(event)">
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
   <img id="drag2" src="Image/Aiden_Thomas_A4_3.jpg" draggable="true" ondragstart="drag(event)">
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px">
   <img id="drag3" src="Image/SimpleHeart.png" draggable="true" ondragstart="drag(event)">
 </div>
 
