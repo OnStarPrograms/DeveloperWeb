@@ -61,7 +61,9 @@
       width:fit-content;
       height: auto;
       padding: 10px;
-      border: 1px solid #aaaaaa;
+      border: 1px solid transparent;
+      position: absolute;
+      z-index:-1;
     }
     
     #div2 {
@@ -69,10 +71,10 @@
       width: 100%;
       height: auto;
       padding: 10px;
-      border: 1px solid #aaaaaa;
+      border: 1px solid transparent;
     }
     #drag1 {
-      max-width: 80px;
+      max-width: 100%;
       height: auto;
     }
     #div1 #drag1{
@@ -80,7 +82,7 @@
       height: auto;
     }
     #drag2 {
-      max-width: 100px;
+      max-width: 100%;
       height: auto;
     }
     #div1 #drag2{
@@ -88,7 +90,7 @@
       height: auto;
     }
     #drag3 {
-      max-width: 100px;
+      max-width: 100%;
       height: auto;
     }
     #div1 #drag3{
