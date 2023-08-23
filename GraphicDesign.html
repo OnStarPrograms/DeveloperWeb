@@ -52,6 +52,50 @@
       max-width: 100%;
       height: auto;
     }
+
+
+    @media screen {
+      #div1 {
+      min-width: 0px;
+      min-height: 0px;
+      width:fit-content;
+      height: auto;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    
+    #div2 {
+      display:flex;
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    #drag1 {
+      max-width: 80px;
+      height: auto;
+    }
+    #div1 #drag1{
+      max-width: 100%;
+      height: auto;
+    }
+    #drag2 {
+      max-width: 100px;
+      height: auto;
+    }
+    #div1 #drag2{
+      max-width: 100%;
+      height: auto;
+    }
+    #drag3 {
+      max-width: 100px;
+      height: auto;
+    }
+    #div1 #drag3{
+      max-width: 100%;
+      height: auto;
+    }
+    }
     </style>
     <script>
     function allowDrop(ev) {
