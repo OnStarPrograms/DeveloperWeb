@@ -13,6 +13,62 @@
   <link rel="stylesheet" href="Style/w3.css">
   <link rel="stylesheet" href="Style/GraphicDesign.css">
   <script src="Js/GraphicDesign.js"></script>
+  <style>
+    #div1 {
+      min-width: 150px;
+      min-height: 100px;
+      width:fit-content;
+      height: auto;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    
+    #div2 {
+      width: 100px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #aaaaaa;
+    }
+    #drag1 {
+      max-width: 100px;
+      height: auto;
+    }
+    #div1 #drag1{
+      max-width: 100%;
+      height: auto;
+    }
+    #drag2 {
+      max-width: 100px;
+      height: auto;
+    }
+    #div1 #drag2{
+      max-width: 100%;
+      height: auto;
+    }
+    #drag3 {
+      max-width: 100px;
+      height: auto;
+    }
+    #div1 #drag3{
+      max-width: 100%;
+      height: auto;
+    }
+    </style>
+    <script>
+    function allowDrop(ev) {
+      ev.preventDefault();
+    }
+    
+    function drag(ev) {
+      ev.dataTransfer.setData("text", ev.target.id);
+    }
+    
+    function drop(ev) {
+      ev.preventDefault();
+      var data = ev.dataTransfer.getData("text");
+      ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
 </head>
 <body>
 
@@ -45,14 +101,24 @@
   <div class="w3-container" id = "body">
     <div id = "homeButt"><button id = "homeButton"  onclick="Transition('Rindex.html')">⌂</button></div>
     <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Graphical Design</h1>
-    <div class="img-comp-container">
-      <div class="img-comp-img">
-        <img src="Image/Aiden_Thomas_A4_3.jpg" width="625" height="500">
-      </div>
-      <div class="img-comp-img img-comp-overlay">
-        <img src="Image/IMG_2995.jpg" width="625" height="500">
-      </div>
+
+<p>Drag and drop an image to resize it to screen</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br>
+<br>
+<br>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
+  <img id="drag1" src="Image/IMG_2995.jpg" draggable="true" ondragstart="drag(event)">
 </div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
+  <img id="drag2" src="Image/Aiden_Thomas_A4_3.jpg" draggable="true" ondragstart="drag(event)">
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
+  <img id="drag3" src="Image/SimpleHeart.png" draggable="true" ondragstart="drag(event)">
+</div>
+
   <br/>
   <br/>
   <br/>

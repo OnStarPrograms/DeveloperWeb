@@ -1,28 +1,83 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<!DOCTYPE HTML>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Test</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="test.css">
-        <script src="test.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id="block1">
-            <img src="Aiden_Thomas_A4_3.jpg" height="500px" width="auto">
-        </div>
-        <div id="block2">
-            <img src="IMG_2995.jpg" height="500px" width="auto">
-        </div>
-        
+<head>
+<style>
+#div1 {
+  min-width: 150px;
+  min-height: 100px;
+  width:fit-content;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+#div2 {
+  width: 100px;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+#drag1 {
+  max-width: 100px;
+  height: auto;
+}
+#div1 #drag1{
+  max-width: 100%;
+  height: auto;
+}
+#drag2 {
+  max-width: 100px;
+  height: auto;
+}
+#div1 #drag2{
+  max-width: 100%;
+  height: auto;
+}
+#drag3 {
+  max-width: 100px;
+  height: auto;
+}
+#div1 #drag3{
+  max-width: 100%;
+  height: auto;
+}
+</style>
+<script>
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</head>
+<body>
+
+<p>Drag and drop an image to resize it to screen</p>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"><div style="position:absolute; z-index:-1">Drag and drop image <br/>into this box <br/> To resize image</div></div>
+<br>
+<br>
+<br>
+
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex">
+  <img id="drag1" src="IMG_2995.jpg" draggable="true" ondragstart="drag(event)">
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex">
+  <img id="drag2" src="Aiden_Thomas_A4_3.jpg" draggable="true" ondragstart="drag(event)">
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex">
+  <img id="drag3" src="SimpleHeart.png" draggable="true" ondragstart="drag(event)">
+</div>
+
+</body>
+</html>
     </body>
 </html>
