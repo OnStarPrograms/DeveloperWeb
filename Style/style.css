@@ -375,6 +375,72 @@ h3{
   }
 }
 
+.Pan3{
+  -moz-animation: pan3 20s infinite;
+  -webkit-animation: pan3 20s infinite;
+  animation: pan3 20s infinite;
+}
+@-moz-keyframes pan3 {
+  0%{
+    -moz-transform: translate(-50%, -20%);
+  }
+  10%{
+    -moz-transform: translate(0%,0%);
+  }
+  30%{
+    -moz-transform: translate(-50%,-25%);
+  }
+  50%{
+    -moz-transform: translate(-15%,-26%);
+  }
+  70%{
+    -moz-transform: translate(-10%,-50%);
+  }
+  100%{
+    -moz-transform: translate(-50%,-20%);
+  }
+}
+@-webkit-keyframes pan3 {
+  0%{
+    -webkit-transform: translate(-50%, -20%);
+  }
+  10%{
+    -webkit-transform: translate(0%,0%);
+  }
+  30%{
+    -webkit-transform: translate(-50%,-25%);
+  }
+  50%{
+    -webkit-transform: translate(-15%,-26%);
+  }
+  70%{
+    -webkit-transform: translate(-10%,-50%);
+  }
+  100%{
+    -webkit-transform: translate(-50%,-20%);
+  }
+}
+
+@keyframes pan3{
+  0%{
+    transform: translate(-50%, -20%);
+  }
+  10%{
+    transform: translate(0%,0%);
+  }
+  30%{
+    transform: translate(-50%,-25%);
+  }
+  50%{
+    transform: translate(-15%,-26%);
+  }
+  70%{
+    transform: translate(-10%,-50%);
+  }
+  100%{
+    transform: translate(-50%,-20%);
+  }
+}
 
 
 
@@ -536,6 +602,39 @@ background-color: grey;
   transition: all 1s ease;
 }
 
+#how{
+  display: block;
+  left:44%; 
+  top:17%; 
+  position: absolute; 
+  max-width:60%;
+  margin-right: 2%;
+}
+#howL{
+  display: block;
+  left:3%; 
+  top:46%; 
+  position: absolute; 
+  max-width:27%;
+  margin-right: 2%;
+}
+#howR{
+  display: block;
+  left:72%; 
+  top:44%; 
+  position: absolute; 
+  max-width:30%;
+  margin-right: 2%;
+}
+#how2{
+  display: block;
+  left:3%; 
+  top:73%; 
+  position: absolute; 
+  max-width:55%;
+  margin-right: 2%;
+}
+
 @media (max-width: 800px) {
   #body{
     width:100%;
@@ -574,5 +673,34 @@ background-color: grey;
   #DownloadZip1{
     width:100%;
     position:relative;
+  }
+  #how{
+    display: block;
+    left:0%; 
+    top:17%; 
+    position: relative; 
+    max-width:100%;
+  }
+  #howL{
+    display: block;
+    left:0%; 
+    top:46%; 
+    position: relative; 
+    max-width:100%;
+  }
+  
+  #howR{
+    display: block;
+    left:0%; 
+    top:43%; 
+    position: relative; 
+    max-width:100%;
+  }
+  #how2{
+    display: block;
+    left:0%; 
+    top:73%; 
+    position: relative; 
+    max-width:100%;
   }
 }
