@@ -27,6 +27,7 @@
       height: 100px;
       padding: 10px;
       border: 1px solid #aaaaaa;
+      transition: all 2s ease;
     }
     #drag1 {
       max-width: 80px;
@@ -54,7 +55,7 @@
     }
 
 
-    @media screen {
+    @media screen and (max-width: 800px){
       #div1 {
       min-width: 0px;
       min-height: 0px;
@@ -72,6 +73,7 @@
       height: auto;
       padding: 10px;
       border: 1px solid transparent;
+      transition: all 2s ease;
     }
     #drag1 {
       max-width: 100%;
@@ -90,15 +92,22 @@
       height: auto;
     }
     #drag3 {
-      width: 100%;
+      max-width: 1000px;
       height: auto;
+      margin-left:20%;
     }
     #div1 #drag3{
       max-width: 100%;
       height: auto;
     }
-    p{
-      z-index: -1;
+    #drag4 {
+      max-width: 1000px;
+      height: auto;
+      margin-left: 280%;
+    }
+    #div1 #drag4{
+      max-width: 100%;
+      height: auto;
     }
     }
     </style>
@@ -150,7 +159,7 @@
     <div id = "homeButt"><button id = "homeButton"  onclick="Transition('Rindex.html')">⌂</button></div>
     <h1 style="font-family: 'Times New Roman', Times, serif; font-size: 3em;">Graphical Design</h1>
 
-<p>Drag and drop an image to resize it to the screen</p>
+<p>Drag and drop an image into the box to resize it to the screen</p>
 
 <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 <br>
@@ -165,6 +174,9 @@
 </div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px">
   <img id="drag3" src="Image/SimpleHeart.png" draggable="true" ondragstart="drag(event)">
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px">
+  <img id="drag4" src="Image/Simpleclub.png" draggable="true" ondragstart="drag(event)">
 </div>
 
   <br/>
