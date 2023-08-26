@@ -71,6 +71,11 @@
       max-width: 100%;
       height: auto;
     }
+    #mobilehide{
+      display: inline-flex;
+      max-width: 100%;
+      overflow: hidden;
+    }
 
 
     @media screen and (max-width: 800px){
@@ -130,6 +135,16 @@
       max-width: 1000px;
       height: auto;
     }
+    #mobilehide{
+        max-width: 80%;
+        overflow: visible;
+      }
+    }
+    @media (pointer:coarse) {
+        #mobilehide{
+        max-width: 80%;
+        overflow: hidden;
+      }
     }
     </style>
     <script>
@@ -189,14 +204,18 @@
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex;">
   <img id="drag2" src="Image/Aiden_Thomas_A4_3.jpg" draggable="true" ondragstart="drag(event)">
 </div>
-<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px">
+<div id="mobilehide">
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px;">
   <img id="drag3" src="Image/SimpleSpade.png" draggable="true" ondragstart="drag(event)">
 </div>
+<div id="emptySpace" style="width:5px; display: inline-flex;"></div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px">
   <img id="drag4" src="Image/SimpleHeart.png" draggable="true" ondragstart="drag(event)">
 </div>
+<div id="emptySpace" style="width:5px; display: inline-flex;"></div>
 <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)" style="display:inline-flex; width:85px">
   <img id="drag5" src="Image/SimpleClub.png" draggable="true" ondragstart="drag(event)">
+</div>
 </div>
 <br>
 <br>
