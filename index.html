@@ -29,13 +29,21 @@
       75%  {top: 2000px;}
       100% {top: 50px;}
     }
+    #noscript{
+      font-size: 2em;
+    }
+    @media (pointer:coarse) {
+      #noscript{
+      font-size: 1em;
+      }
+    }
     </style>
 </head>
 <body>
 
 <!-- Page Content -->
 <!-- <div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div> -->
-    <div style="font-size: 2em;"><a href="Rindex.html">Warning! there might be some items within this website that wont load properly click here to acknowledge and continue</a></div>
+    <div id="noscript"><a href="Rindex.html">Warning! there might be some items within this website that wont load properly click here to acknowledge and continue<noscript> A.K.A You have javascript disabled</noscript></a></div>
   <script>
     if (HTMLScriptElement.supports &&
         HTMLScriptElement.supports('speculationrules')) {
