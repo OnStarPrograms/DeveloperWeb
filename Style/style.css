@@ -605,7 +605,7 @@ background-color: grey;
 #how{
   display: block;
   left:44%; 
-  top:17%; 
+  top:15%; 
   position: absolute; 
   max-width:60%;
   margin-right: 2%;
@@ -613,7 +613,7 @@ background-color: grey;
 #howL{
   display: block;
   left:3%; 
-  top:46%; 
+  top:39%; 
   position: absolute; 
   max-width:27%;
   margin-right: 2%;
@@ -621,7 +621,7 @@ background-color: grey;
 #howR{
   display: block;
   left:72%; 
-  top:44%; 
+  top:38%; 
   position: absolute; 
   max-width:30%;
   margin-right: 2%;
@@ -629,7 +629,7 @@ background-color: grey;
 #how2{
   display: block;
   left:3%; 
-  top:73%; 
+  top:63%; 
   position: absolute; 
   max-width:55%;
   margin-right: 2%;
